@@ -1,4 +1,5 @@
 npm init -y
 npm i -D tailwindcss
 npx tailwindcss init
+npm run build
 git init

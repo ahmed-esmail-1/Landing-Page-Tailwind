@@ -2,4 +2,4 @@
 
 npm run watch
 
-then use the program, just html and tailwind
+then use the website, just html and tailwind

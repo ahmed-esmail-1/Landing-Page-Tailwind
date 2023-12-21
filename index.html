@@ -8,280 +8,18 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="relative container mx-auto p-6">
-      <!-- Flex container -->
-      <div class="flex items-center justify-between">
-        <!-- Logo -->
-        <div class="pt-2">
-          <img src="img/logo.svg" class="h-32" alt="logo" />
-        </div>
-        <!-- Menu items -->
-        <div class="hidden md:flex space-x-6">
-          <a href="" class="hover:text-darkGrayishBlue">Pricing</a>
-          <a href="" class="hover:text-darkGrayishBlue">Products</a>
-          <a href="" class="hover:text-darkGrayishBlue">About Us</a>
-          <a href="" class="hover:text-darkGrayishBlue">Careers</a>
-          <a href="" class="hover:text-darkGrayishBlue">Community</a>
-        </div>
-        <!-- Button -->
-        <a
-          href=""
-          class="hidden md:block p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
-          >Get Started</a
-        >
+    <!-- #include file="navbar.html" -->
+    <div id="navbar"></div>
+    <div id="hero"></div>
 
-        <!-- Hamburger Icon -->
-        <button
-          id="menu-btn"
-          class="open block hamburger md:hidden focus:outline-none"
-        >
-          <span class="hamburger-top"></span>
-          <span class="hamburger-middle"></span>
-          <span class="hamburger-buttom"></span>
-        </button>
-      </div>
-      <!-- Mobile Menu -->
-      <!-- Add and remove flex on click (replace hidden) -->
-      <div class="md:hidden">
-        <div
-          id="menu"
-          class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
-        >
-          <a href="#">Pricing</a>
-          <a href="#">Products</a>
-          <a href="#">About Us</a>
-          <a href="#">Careers</a>
-          <a href="#">Community</a>
-        </div>
-      </div>
-    </nav>
+    <div id="features"></div>
 
-    <!-- Hero section -->
-    <section id="hero">
-      <!-- Flex container -->
-      <div
-        class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0"
-      >
-        <!-- Left side -->
-        <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
-          <h1
-            class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left"
-          >
-            This is a sample heading
-          </h1>
-          <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
-            Welcome to our innovative platform, where possibilities unfold and
-            experiences thrive! At Your Company Name, we're dedicated to
-            redefining your digital journey. Imagine a space where creativity
-            meets functionality, where user-friendly interfaces seamlessly
-            intertwine with cutting-edge technology. From sleek designs to
-            robust features, our landing page serves as the gateway to a world
-            of endless possibilities. Explore our curated selection of services
-            tailored to elevate your online presence. Unleash the power of
-            seamless navigation, captivating visuals, and personalized
-            interactions. Join us on a journey where your vision becomes a
-            digital reality. Welcome to a new era of online excellence – welcome
-            to Your Company Name.
-          </p>
-
-          <div class="flex justify-center md:justify-start">
-            <a
-              href=""
-              class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
-              >Get Started</a
-            >
-          </div>
-        </div>
-
-        <!-- Right side (images) -->
-        <div class="md:w-1/2">
-          <img src="img/illustration-intro.svg" alt="" />
-        </div>
-      </div>
-    </section>
-
+    <div id="team"></div>
+    <div id="cta"></div>
+    <div id="footer"></div>
     <!-- Features section -->
-    <section id="features">
-      <!-- Flex container -->
-      <div
-        class="container flex flex-col px-4 mx-auto mt-10 space-y-12 md:space-x-0 md:flex-row"
-      >
-        <!-- First -->
-        <div class="flex flex-col space-y-12 md:w-1/2">
-          <h2 class="max-w-md text-4xl font-bold text-center md:text-left">
-            What's different about us?
-          </h2>
-          <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
-            Welcome to our innovative platform, where possibilities unfold and
-            experiences thrive! At Your Company Name, we're dedicated to
-            redefining your digital journey. Imagine a space where creativity
-            meets functionality, where user-friendly interfaces seamlessly
-            intertwine with cutting-edge technology.
-          </p>
-        </div>
-
-        <!-- Second (numbers) -->
-
-        <div class="flex flex-col space-y-8 md:w-1/2">
-          <!-- Item 1 -->
-          <div
-            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
-          >
-            <!-- Heading -->
-            <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
-              <div class="flex flex-items space-x-2">
-                <div
-                  class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
-                >
-                  01
-                </div>
-                <!-- For small -->
-                <h3 class="text-base font-bold md:mb-4 md:hidden">
-                  First text goes here...
-                </h3>
-              </div>
-            </div>
-
-            <div>
-              <!-- For medium -->
-              <h3 class="hidden mb-4 text-lg font-bold md:block">
-                First text goes here...
-              </h3>
-              <p class="text-darkGrayishBlue">
-                Welcome to our innovative platform, where possibilities unfold
-                and experiences thrive! At Your Company Name, we're dedicated to
-                redefining your digital journey. Imagine a space where
-                creativity meets functionality, where user-friendly interfaces
-                seamlessly intertwine with cutting-edge technology.
-              </p>
-            </div>
-          </div>
-
-          <!-- Item 2 -->
-          <div
-            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
-          >
-            <!-- Heading -->
-            <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
-              <div class="flex flex-items space-x-2">
-                <div
-                  class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
-                >
-                  02
-                </div>
-                <!-- For small -->
-                <h3 class="text-base font-bold md:mb-4 md:hidden">
-                  Second text goes here...
-                </h3>
-              </div>
-            </div>
-
-            <div>
-              <!-- For medium -->
-              <h3 class="hidden mb-4 text-lg font-bold md:block">
-                Second text goes here...
-              </h3>
-              <p class="text-darkGrayishBlue">
-                Welcome to our innovative platform, where possibilities unfold
-                and experiences thrive! At Your Company Name, we're dedicated to
-                redefining your digital journey. Imagine a space where
-                creativity meets functionality, where user-friendly interfaces
-                seamlessly intertwine with cutting-edge technology.
-              </p>
-            </div>
-          </div>
-
-          <!-- Item 3 -->
-          <div
-            class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
-          >
-            <!-- Heading -->
-            <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
-              <div class="flex flex-items space-x-2">
-                <div
-                  class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
-                >
-                  03
-                </div>
-                <!-- For small -->
-                <h3 class="text-base font-bold md:mb-4 md:hidden">
-                  Third text goes here...
-                </h3>
-              </div>
-            </div>
-
-            <div>
-              <!-- For medium -->
-              <h3 class="hidden mb-4 text-lg font-bold md:block">
-                Third text goes here...
-              </h3>
-              <p class="text-darkGrayishBlue">
-                Welcome to our innovative platform, where possibilities unfold
-                and experiences thrive! At Your Company Name, we're dedicated to
-                redefining your digital journey. Imagine a space where
-                creativity meets functionality, where user-friendly interfaces
-                seamlessly intertwine with cutting-edge technology.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Team section -->
-    <section id="members">
-      <!-- Container for heading and images -->
-      <div class="max-w-6xl px-5 mx-auto mt-32 text-center">
-        <!-- Heading -->
-        <h2 class="text-4xl font-bold text-center">Meet our team members!</h2>
-        <!-- Each image container -->
-        <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
-          <!-- Image 1 -->
-          <div
-            class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
-          >
-            <img src="" class="w-16 -mt-14" alt="img 1" />
-            <h5 class="text-lg font-bold">Ahmed Esmail</h5>
-            <p class="text-sm text-darkGrayishBlue">
-              Welcome to our innovative platform, where possibilities unfold and
-              experiences thrive! At Your Company Name
-            </p>
-          </div>
-          <!-- 2 and 3 are hidden on small devices -->
-          <!-- Image 2 -->
-          <div
-            class="hidden md:flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
-          >
-            <img src="" class="w-16 -mt-14" alt="img 1" />
-            <h5 class="text-lg font-bold">Ahmed Esmail 2</h5>
-            <p class="text-sm text-darkGrayishBlue">
-              Welcome to our innovative platform, where possibilities unfold and
-              experiences thrive! At Your Company Name 2
-            </p>
-          </div>
-
-          <!-- Image 3 -->
-          <div
-            class="hidden md:flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
-          >
-            <img src="" class="w-16 -mt-14" alt="img 1" />
-            <h5 class="text-lg font-bold">Ahmed Esmail 3</h5>
-            <p class="text-sm text-darkGrayishBlue">
-              Welcome to our innovative platform, where possibilities unfold and
-              experiences thrive! At Your Company Name 3
-            </p>
-          </div>
-        </div>
-        <!-- Button -->
-        <div class="my-16">
-          <a
-            href=""
-            class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
-            >Get Started</a
-          >
-        </div>
-      </div>
-    </section>
 
     <!-- Call To Action section -->
     <section id="cta" class="bg-brightRed">
@@ -386,5 +124,40 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+      // script.js
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to load HTML content into an element
+        function includeHTML(targetId, filePath) {
+          fetch(filePath)
+            .then((response) => response.text())
+            .then((html) => {
+              document.getElementById(targetId).innerHTML = html;
+              attachNavToggleListener();
+            })
+            .catch((error) => console.error("Error loading HTML:", error));
+        }
+
+        // Include each section
+        includeHTML("navbar", "components/navbar.html");
+        includeHTML("hero", "components/hero.html");
+        includeHTML("features", "components/features.html");
+        includeHTML("team", "components/team.html");
+        // includeHTML("cta", "cta.html");
+        // includeHTML("footer", "footer.html");
+      });
+
+      // Function to attach the event listener for toggling the navigation
+      function attachNavToggleListener() {
+        const btn = document.getElementById("menu-btn");
+        const nav = document.getElementById("menu");
+
+        btn.addEventListener("click", () => {
+          btn.classList.toggle("open");
+          nav.classList.toggle("flex");
+          nav.classList.toggle("hidden");
+        });
+      }
+    </script>
   </body>
 </html>

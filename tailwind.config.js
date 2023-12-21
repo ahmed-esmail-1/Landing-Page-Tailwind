@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html"], //the path to your files
+  content: [
+    "./*.html",
+    "./components/**/*.html", // Include all HTML files in the components directory and its subdirectories
+  ], //the path to your files, Whew!
   theme: {
     screens: {
       sm: "480px",

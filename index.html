@@ -35,7 +35,15 @@
             .then((response) => response.text())
             .then((html) => {
               document.getElementById(targetId).innerHTML = html;
-              attachNavToggleListener();
+              // Wait for images to load before attaching the event listener
+              document
+                .getElementById(targetId)
+                .querySelectorAll("img")
+                .forEach((img) => {
+                  img.addEventListener("load", () => {
+                    attachNavToggleListener();
+                  });
+                });
             })
             .catch((error) => console.error("Error loading HTML:", error));
         }

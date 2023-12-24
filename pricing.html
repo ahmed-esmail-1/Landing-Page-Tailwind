@@ -373,18 +373,14 @@
         // Function to load HTML content into an element
         function includeHTML(targetId, filePath) {
           fetch(filePath)
-            .then((response) => response.text())
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+              }
+              return response.text();
+            })
             .then((html) => {
               document.getElementById(targetId).innerHTML = html;
-              // Wait for images to load before attaching the event listener
-              document
-                .getElementById(targetId)
-                .querySelectorAll("img")
-                .forEach((img) => {
-                  img.addEventListener("load", () => {
-                    attachNavToggleListener();
-                  });
-                });
             })
             .catch((error) => console.error("Error loading HTML:", error));
         }
@@ -396,6 +392,9 @@
         // includeHTML("team", "components/team.html");
         // includeHTML("cta", "components/cta.html");
         includeHTML("footer", "components/footer.html");
+
+        // Attach the event listener after all content is loaded
+        attachNavToggleListener();
       });
 
       // Function to attach the event listener for toggling the navigation

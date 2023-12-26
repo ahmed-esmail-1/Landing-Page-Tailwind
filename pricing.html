@@ -10,7 +10,7 @@
     <!-- Include Navbar Component -->
     <div id="navbar"></div>
 
-    <div id="hero"></div>
+    <!-- <div id="hero"></div> -->
 
     <!-- Pricing Section -->
     <section class="bg-white dark:bg-gray-900">
@@ -374,38 +374,38 @@
         // Function to load HTML content into an element
         function includeHTML(targetId, filePath) {
           fetch(filePath)
-            .then((response) => response.text())
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+              }
+              return response.text();
+            })
             .then((html) => {
               document.getElementById(targetId).innerHTML = html;
-              // Wait for images to load before attaching the event listener
-              document
-                .getElementById(targetId)
-                .querySelectorAll("img")
-                .forEach((img) => {
-                  img.addEventListener("load", () => {
-                    attachNavToggleListener();
-                  });
-                });
+            })
+            .then(() => {
+              // After loading HTML, reattach event listener
+              attachNavToggleListener();
             })
             .catch((error) => console.error("Error loading HTML:", error));
         }
 
         // Include each section
         includeHTML("navbar", "components/navbar.html");
-        //Without hero, the mob menu is not working, intreesting
-        includeHTML("hero", "components/hero.html");
-        // includeHTML("features", "components/features.html");
-        // includeHTML("team", "components/team.html");
-        // includeHTML("cta", "components/cta.html");
-        includeHTML("footer", "components/footer.html");
+        // Remove the line that includes "hero" content
+
+        // Attach the initial event listener
+        attachNavToggleListener();
       });
 
       // Function to attach the event listener for toggling the navigation
       function attachNavToggleListener() {
+        const parentElement = document.body; // You can use any suitable parent element
         const btn = document.getElementById("menu-btn");
         const nav = document.getElementById("menu");
 
-        btn.addEventListener("click", () => {
+        // Use event delegation to handle clicks on any child element
+        parentElement.addEventListener("click", () => {
           btn.classList.toggle("open");
           nav.classList.toggle("flex");
           nav.classList.toggle("hidden");
